@@ -10,15 +10,11 @@
 	<title>Edit data</title>
 </head>
 <body>
- 
-	<h2>Edit data</h2>
+	<h3>EDIT DATA</h3>
 	<br/>
 	<a href="data">Back</a>
 	<br/>
 	<br/>
-	<h3>EDIT DATA MAHASISWA</h3>
- 
-	
 		<form method="post" action="update">
 			<table>
 				<tr>			
