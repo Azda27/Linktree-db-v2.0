@@ -33,24 +33,24 @@ if( isset($_POST["submit"]) ) {
 	<br/>
 	<h3>Input Link</h3>
 	<form method="post" action="">
-		<table>
-			<tr>			
-				<td>Id</td>
-				<td><input type="text" name="id" require></td>
-			</tr>
-			<tr>			
-				<td>Name</td>
-				<td><input type="text" name="name" require></td>
-			</tr>
-			<tr>
-				<td>Link</td>
-				<td><textarea name="link" cols="22" rows="5" ></textarea></td>
-				<td><p>include http / https</p></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><button type="submit" name="submit">Input</button></td>
-			</tr>		
-		</table>
+			<div class="id">
+				<span>Id</span>
+				<br>
+				<input type="text" name="id" require>
+			</div>
+			<div class="name">
+				<span>Name</span>
+				<br>
+				<input type="text" name="name" require>
+			</div>
+			<div class="link">
+				<span>Link</span>
+				<br>
+				<textarea name="link"></textarea>
+				<p>include http / https</p>
+			</div>
+			<div class="submit">
+				<button type="submit" name="submit">Input</button>
+			</div>
 	</form>
 </body>
