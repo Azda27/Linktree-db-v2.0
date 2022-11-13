@@ -8,6 +8,7 @@
 <html>
 <head>
 	<title>Edit data</title>
+	<style>textarea{resize: none;}</style>
 </head>
 <body>
 	<h3>EDIT DATA</h3>
@@ -19,7 +20,7 @@
 		<div class="id">
 			<span>Id</span>
 			<br>
-			<input type="text" name="id" value="<?php echo $d['id']; ?>" require>
+			<input type="text" name="id" value="<?php echo $d['id']; ?>" require readonly>
 		</div>
 		<div class="name">
 			<span>Name</span>
