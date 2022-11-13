@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -43,50 +42,4 @@ td{
 }
 .td1,.td2,.td5,.td6{
     width: 60px;
-=======
-*{
-    padding: 0;
-    margin: 0;
-}
-table{
-    width: 80%;
-}
-th,tr,td{
-    font-size: 16pt;
-    border: black solid 1px;
-    text-align: center;
-    background-color: gray;
-    color:white;
-}
-td{
-    border: black solid 1px;
-    font-size: 14pt;
-    background-color: blanchedalmond;
-    height: 50px;
-    color: black;
-}
-.delete,
-.edit{
-    width: 30px;
-    background-color: red;
-    height: 30px;
-    border: 0px black solid;
-    border-radius:10px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-.delete i,
-.edit i{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6px;
-    color: white;
-}
-.edit{
-    background-color: rgb(255, 123, 0);
-}
-.td1,.td2,.td5,.td6{
-    width: 60px;
->>>>>>> 48a9281da62ed2864d4c21a8314ea27adad79be8
 }
