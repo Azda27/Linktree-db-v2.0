@@ -26,12 +26,12 @@ if( isset($_POST["submit"]) ) {
 	<style>textarea{resize: none;}</style>
 </head>
 <body>
- 
+	<h3>Input Link</h3>
 	<br/>
 	<a href="data">Data</a>
 	<br/>
 	<br/>
-	<h3>Input Link</h3>
+
 	<form method="post" action="">
 		<div class="id">
 			<span>Id</span>
