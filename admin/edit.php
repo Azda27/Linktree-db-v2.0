@@ -16,26 +16,27 @@
 	<br/>
 	<br/>
 		<form method="post" action="update">
-			<table>
-				<tr>			
-					<td>id</td>
-					<td>
-						<input type="text" name="id" value="<?php echo $d['id']; ?>" readonly>
-					</td>
-				</tr>
-				<tr>
-					<td>Name</td>
-					<td><input type="text" name="name" value="<?php echo $d['name']; ?>"></td>
-				</tr>
-				<tr>
-					<td>Link</td>
-					<td><input type="text" name="link" value="<?php echo $d['link']; ?>"></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Update"></td>
-				</tr>		
-			</table>
-		</form>
+		<div class="id">
+			<span>Id</span>
+			<br>
+			<input type="text" name="id" value="<?php echo $d['id']; ?>" require>
+		</div>
+		<div class="name">
+			<span>Name</span>
+			<br>
+			<input type="text" name="name"  value="<?php echo $d['name']; ?>" require>
+		</div>
+		<div class="link">
+			<span>Link</span>
+			<br>
+			<textarea name="link"rows="4" cols="22.5"><?php echo $d['link']; ?></textarea>
+			<br>
+			<span>include http / https</span>
+		</div>
+		<br>
+		<div class="submit">
+			<button type="submit" name="submit">Update</button>
+		</div>
+	</form>
 		<?php } ?>
 </body>
