@@ -16,6 +16,7 @@ require 'connection.php'
     <?php $data = mysqli_query($conn,"select * from link");while($d = mysqli_fetch_array($data)){?>
     <div class="link">
         <li><a target="_blank" href="<?php echo $d['link'];?>"><div><?php echo $d['name'];?></div></a></li>
+        <br>
     </div>
     <?php }?>
     <br><br>

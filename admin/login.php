@@ -1,5 +1,5 @@
 <?php
-include 'func/log-func.php';
+include 'log-func.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
