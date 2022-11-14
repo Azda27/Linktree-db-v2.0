@@ -21,14 +21,15 @@ td{
 }
 .delete,
 .edit{
-    width: 30px;
-    background-color: red;
+    width: 80px;
     height: 30px;
+	background-color: red;
     border: 0px black solid;
-    border-radius:10px;
+    border-radius:4px;
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+	margin-bottom: 2px;
 }
 .delete i,
 .edit i{
@@ -40,6 +41,15 @@ td{
 .edit{
     background-color: rgb(255, 123, 0);
 }
-.td1,.td2,.td5,.td6{
-    width: 60px;
+.td1,.td2{
+    width: 40px;
+}
+.td3{
+	width: 120px;
+}
+.td4{
+    width: 300px;
+}
+.td5,.td6{
+    width: 80px;
 }
