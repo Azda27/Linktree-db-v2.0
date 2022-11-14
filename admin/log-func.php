@@ -1,5 +1,5 @@
 <?php 
-require 'connection.php';
+require '../connection.php';
 session_start();
 // cek cookie
 if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
