@@ -1,41 +1,45 @@
 <?php
-include 'log-func.php';
+require 'log-func.php';
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title> </title>
-    <link rel="stylesheet" href="css/PUlACaKiDkvtctTs.css">
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"rel="stylesheet"/>
-  </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/asdwad.css">
+</head>
 <body>
-  <div class="container">
-    <div class="title">Login</div>
-    <div class="content">
-      <form action="" method="post">
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Username</span>
-            <input type="text" name="username" id="username" placeholder="Enter your username" required>
-          </div>
-          <div class="input-box">
-            <span class="details">Paswword</span>
-            <input type="password" name="password" id="password" placeholder="Enter your paswword" required>
-            <i class='bx bxs-hide show-hide' ></i>
-          </div>
-          <div class="remember">
-            <input type="checkbox" name="remember" id="remember">
-            <span for="remember">Remember me</span>
-          </div>
-        <div class="button">
-          <input type="submit" name="login" value="Login">
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Admin Login</span>
+                <form method="post">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your username" name="username" id="username" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" name="password" id="password" required>
+                        <i class='bx bxs-lock'></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                    </div>
+                    <div class="input-field button">
+                        <input type="submit" name="login" value="login">
+                    </div>
+                </form>
+            </div>
         </div>
-      </form>
     </div>
-  </div>
-  
-<script src="script.js"></script>
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

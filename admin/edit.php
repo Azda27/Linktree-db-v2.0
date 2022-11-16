@@ -30,7 +30,7 @@
 		<div class="link">
 			<span>Link</span>
 			<br>
-			<textarea name="link"rows="4" cols="22.5"><?php echo $d['link']; ?></textarea>
+			<input name="link" type="text"value="<?php echo $d['link']; ?>">
 			<br>
 			<span>include http / https</span>
 		</div>

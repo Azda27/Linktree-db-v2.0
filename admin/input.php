@@ -46,7 +46,7 @@ if( isset($_POST["submit"]) ) {
 		<div class="link">
 			<span>Link</span>
 			<br>
-			<textarea name="link"rows="4" cols="22.5"></textarea>
+			<input name="link" type="text">
 			<br>
 			<span>include http / https</span>
 		</div>
