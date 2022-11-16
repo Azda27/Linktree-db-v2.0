@@ -11,11 +11,13 @@
 	<style>textarea{resize: none;}</style>
 </head>
 <body>
-	<h3>EDIT DATA</h3>
-	<br/>
-	<a href="data">Back</a>
-	<br/>
-	<br/>
+	<div>
+		<h3>EDIT DATA</h3>
+		<br/>
+		<a href="data">Back</a>
+		<br/>
+		<br/>
+	</div>
 		<form method="post" action="update">
 		<div class="id">
 			<span>Id</span>
