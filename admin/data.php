@@ -15,15 +15,14 @@ $row = mysqli_fetch_assoc($result);
 </head>
 <body>
 	<div>
-		
-	<h2>Data Link</h2>
-	<br/>
-	<a href="input">Input link</a> 
-	<a>//</a>
-	<a href="logout.php">Logout</a>
-	<br/><br><br>
-	<h1>Welcome <?php echo $row["username"]; ?></h1>
-	<br><br>
+		<h2>Data Link</h2>
+		<br/>
+		<a href="input">Input link</a> 
+		<a>//</a>
+		<a href="logout.php">Logout</a>
+		<br/><br><br>
+		<h1>Welcome <?php echo $row["username"]; ?></h1>
+		<br><br>
 	</div>
 	<table>
 		<tr>
@@ -57,5 +56,3 @@ while($d = mysqli_fetch_array($data)){
 	</table>
 </body>
 </html>
-
-
