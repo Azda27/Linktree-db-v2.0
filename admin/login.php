@@ -1,5 +1,37 @@
-<?php
-require 'log-func.php';
+<?php 
+require '../connection.php';
+session_start();
+if( isset($_COOKIE['id']) && isset($_COOKIE['key']) ) {
+	$id = $_COOKIE['id'];
+	$key = $_COOKIE['key'];
+	$result = mysqli_query($conn, "SELECT username FROM admin WHERE id = $id");
+	$row = mysqli_fetch_assoc($result);
+	if( $key === hash('sha256', $row['username']) ) {
+		$_SESSION['login'] = true;
+	}
+}
+if( isset($_SESSION["login"]) ) {
+	header("Location: index");
+	exit;
+}
+if( isset($_POST["login"]) ) {
+	$username = $_POST["username"];
+	$password = $_POST["password"];
+	$result = mysqli_query($conn, "SELECT * FROM admin WHERE username = '$username'");
+	if( mysqli_num_rows($result) === 1 ) {
+		$row = mysqli_fetch_assoc($result);
+		if( password_verify($password, $row["password"]) ) {
+			$_SESSION["login"] = true;
+			if( isset($_POST['remember']) ) {
+				setcookie('id', $row['id'], time()+60);
+				setcookie('key', hash('sha256', $row['username']), time()+60);
+			}
+			header("Location: index");
+			exit;
+		}
+	}
+	$error = true;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,12 +52,12 @@ require 'log-func.php';
                 <form method="post">
                     <div class="input-field">
                         <input type="text" placeholder="Enter your username" name="username" id="username" required>
-                        <i class='bx bxs-user'></i>
+                        
                     </div>
                     <div class="input-field">
                         <input type="password" class="password" placeholder="Enter your password" name="password" id="password" required>
-                        <i class='bx bxs-lock'></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
+                        <i></i>
+                        <i class='bx bxs-hide show-hide' ></i>
                     </div>
                     <div class="checkbox-text">
                         <div class="checkbox-content">

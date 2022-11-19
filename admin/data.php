@@ -12,6 +12,9 @@ $row = mysqli_fetch_assoc($result);
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<title>Data</title>
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		
+	</style>
 </head>
 <body>
 	<div>
@@ -49,8 +52,8 @@ while($d = mysqli_fetch_array($data)){
 			<td class="td2"><?php echo $d['id']; ?></td>
 			<td class="td3"><?php echo $d['name']; ?></td>
 			<td class="td4"><?php echo $d['link']; ?></td>
-			<td class="td5"><div class="edit"><a href="edit?id=<?php echo $d['id']; ?>"><i class="bx bx-edit">Edit</i></a></div></td>
-			<td class="td6"><div class="delete"><a href="delete?id=<?php echo $d['id']; ?>"><i class="bx bx-trash">Delete</i></a></div></td>
+			<td class="td5"><div class="edit"><a href="edit?id=<?php echo $d['id']; ?>"><i class="bx bx-edit"></i></a></div></td>
+			<td class="td6"><div class="delete"><a href="delete?id=<?php echo $d['id']; ?>"><i class="bx bx-trash"></i></a></div></td>
 		</tr>
 <?php } ?>
 	</table>
