@@ -24,37 +24,24 @@ if( isset($_POST["submit"]) ) {
 <head>
 	<title>Input</title>
 	<style>textarea{resize: none;}</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div>
 	<h3>Input Link</h3>
 	<br/>
 	<a href="data">Data</a>
-	<br/>
-	<br/>
 	</div>
-
-	<form method="post" action="">
-		<div class="id">
-			<span>Id</span>
+	<div class="login-page">
+        <div class="form">
+            <h2>Data Input</h2>
 			<br>
-			<input type="text" name="id" require>
-		</div>
-		<div class="name">
-			<span>Name</span>
-			<br>
-			<input type="text" name="name" require>
-		</div>
-		<div class="link">
-			<span>Link</span>
-			<br>
-			<input name="link" type="text">
-			<br>
-			<span>include http / https</span>
-		</div>
-		<br>
-		<div class="submit">
-			<button type="submit" name="submit">Input</button>
-		</div>
-	</form>
+            <form class="login-form" method="post">
+				<input type="number" name="id" placeholder="id" required>
+				<input type="text" name="name" placeholder="name" required>
+				<input type="text" name="link" placeholder="link" required>
+				<button name="submit">input</button>
+            </form>
+        </div>
+    </div>
 </body>

@@ -31,6 +31,7 @@ require 'connection.php'
     <div class="header">Azda</div>
     <br><br><br><br><br>
     <?php $data = mysqli_query($conn,"select * from link");while($d = mysqli_fetch_array($data)){?>
+    
     <div class="link">
         <li><a target="_blank" href="<?php echo $d['link'];?>"><div><?php echo $d['name'];?></div></a></li>
         <br>

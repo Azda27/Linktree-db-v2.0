@@ -7,39 +7,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Edit data</title>
-	<style>textarea{resize: none;}</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Edit Data</title>
 </head>
 <body>
 	<div>
-		<h3>EDIT DATA</h3>
-		<br/>
-		<a href="data">Back</a>
-		<br/>
-		<br/>
+	<h3>Edit Data</h3>
+	<br/>
+	<a href="data">Data</a>
 	</div>
-		<form method="post" action="update">
-		<div class="id">
-			<span>Id</span>
+	<div class="login-page">
+        <div class="form">
+            <h2>Data Edit</h2>
 			<br>
-			<input type="text" name="id" value="<?php echo $d['id']; ?>" require readonly>
-		</div>
-		<div class="name">
-			<span>Name</span>
-			<br>
-			<input type="text" name="name"  value="<?php echo $d['name']; ?>" require>
-		</div>
-		<div class="link">
-			<span>Link</span>
-			<br>
-			<input name="link" type="text"value="<?php echo $d['link']; ?>">
-			<br>
-			<span>include http / https</span>
-		</div>
-		<br>
-		<div class="submit">
-			<button type="submit" name="submit">Update</button>
-		</div>
-	</form>
-		<?php } ?>
+            <form class="login-form" method="post" action="update.php">
+				<input type="number" name="id" placeholder="id" value="<?php echo $d['id']; ?>" >
+				<input type="text" name="name" placeholder="name" value="<?php echo $d['name']; ?>" required>
+				<input type="text" name="link" placeholder="link" value="<?php echo $d['link']; ?>" required>
+				<button name="submit">update</button>
+            </form>
+        </div>
+    </div>
 </body>
+<?php }?>
