@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Edit Data</title>
 </head>
-<body>
+<body class="bod-log">
 	<div>
 	<h3>Edit Data</h3>
 	<br/>

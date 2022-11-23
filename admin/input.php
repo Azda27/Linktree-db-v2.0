@@ -22,13 +22,15 @@ if( isset($_POST["submit"]) ) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Input</title>
-	<style>textarea{resize: none;}</style>
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Input Data</title>
 </head>
-<body>
+<body class="bod-log">
 	<div>
-	<h3>Input Link</h3>
+	<h3>Input Data</h3>
 	<br/>
 	<a href="data">Data</a>
 	</div>
@@ -37,7 +39,7 @@ if( isset($_POST["submit"]) ) {
             <h2>Data Input</h2>
 			<br>
             <form class="login-form" method="post">
-				<input type="number" name="id" placeholder="id" required>
+				<input type="number" name="id" placeholder="id" >
 				<input type="text" name="name" placeholder="name" required>
 				<input type="text" name="link" placeholder="link" required>
 				<button name="submit">input</button>
