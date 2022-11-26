@@ -1,5 +1,7 @@
 <?php 
 require 'session.php';
+$result = mysqli_query($conn, "SELECT * FROM admin");
+$row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,109 +9,89 @@ require 'session.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/side.css">
-    <title>Document</title>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="logo.png" alt="">
-                </span>
+    <div class="sidebar close">
+        <a href="#" class="logo-box">
+            <i class='bx bx-circle-quarter'></i>
+            <div class="logo-name">Azda</div>
+        </a>
 
-                <div class="text logo-text">
-                    <span class="name">Codinglab</span>
-                    <span class="profession">Web developer</span>
-                </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-            
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboards</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#" alt="users">
-                            <i class='bx bx-user icon' ></i>
-                            <span class="text nav-text">Users</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-report icon' ></i>
-                            <span class="text nav-text">Reports</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-note icon' ></i>
-                            <span class="text nav-text">Notes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">Likes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-wallet icon' ></i>
-                            <span class="text nav-text">Wallets</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Logout</span>
+        <ul class="sidebar-list">
+            <li>
+                <div class="title">
+                    <a href="index" class="link">
+                        <i class='bx bx-home' ></i>
+                        <span class="name">Home</span>
                     </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
-            </div>
-        </div>
-
-    </nav>
-
+                </div>
+                <div class="submenu">
+                    <a href="index" class="link submenu-title">Home</a>
+                </div>
+            </li>
+            <li>
+                <div class="title">
+                    <a href="data" class="link">
+                        <i class='bx bx-data'></i>
+                        <span class="name">Data</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="data" class="link submenu-title">Data</a>
+                </div>
+            </li>            <li>
+                <div class="title">
+                    <a href="delete" class="link">
+                        <i class='bx bx-trash'></i>
+                        <span class="name">Delete</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="delete" class="link submenu-title">Delete</a>
+                </div>
+            </li>            
+            <li>
+                <div class="title">
+                    <a href="edit" class="link">
+                        <i class='bx bx-edit'></i>
+                        <span class="name">Edit</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="edit" class="link submenu-title">Edit</a>
+                </div>
+            </li>            
+            <li>
+                <div class="title">
+                    <a href="input" class="link">
+                        <i class='bx bx-list-plus'></i>
+                        <span class="name">Input</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="input" class="link submenu-title">Input</a>
+                </div>
+            </li>            
+            <li>
+                <div class="title">
+                    <a href="logout" class="link">
+                        <i class='bx bx-log-out'></i>
+                        <span class="name">Logout</span>
+                    </a>
+                </div>
+                <div class="submenu">
+                    <a href="logout" class="link submenu-title">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
     <section class="home">
-        <div class="text">Dashboard Sidebar</div>
+        <div class="toggle-sidebar"></div>
+        <h1>Welcome <?php echo $row["username"]; ?></h1>
     </section>
-    <script src="script.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
+
+</html>

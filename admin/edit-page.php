@@ -1,16 +1,17 @@
-<?php 
-require 'session.php';
-$result = mysqli_query($conn, "SELECT * FROM admin");
-$row = mysqli_fetch_assoc($result);
-?>
+<?php
+	include 'session.php';
+	$id = $_GET['id'];
+	$data = mysqli_query($conn,"select * from link where id='$id'");
+	while($d = mysqli_fetch_array($data)){
+    ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="sidebar close">
@@ -89,40 +90,18 @@ $row = mysqli_fetch_assoc($result);
     </div>
     <section class="home">
         <div class="toggle-sidebar"></div>
-		<div>
-		<h2>Data Link</h2>
-		<br>
-		<h1>Welcome <?php echo $row["username"]; ?></h1>
-		<br><br>
-	</div>
-	<table>
-		<tr class="top">
-			<th>No</th>
-			<th>Id</th>
-			<th>Name</th>
-			<th>Link</th>
-			<!-- <th>Edit</th>
-            <th>Delete</th> -->
-		</tr>
-
-<!-- php -->
-<?php 
-$no = 1;$data = mysqli_query($conn,"select * from link");
-while($d = mysqli_fetch_array($data)){
-?>
-
-		<tr>
-			<td class="td1"><?php echo $no++; ?></td>
-			<td class="td2"><?php echo $d['id']; ?></td>
-			<td class="td3"><?php echo $d['name']; ?></td>
-			<td class="td4"><?php echo $d['link']; ?></td>
-			<!-- <td class="td5"><div class="edit"><a href="edit?id=<?php echo $d['id']; ?>"><i class="bx bx-edit"></i></a></div></td>
-			<td class="td6"><div class="delete"><a href="delete?id=<?php echo $d['id']; ?>"><i class="bx bx-trash"></i></a></div></td> -->
-		</tr>
-<?php } ?>
-	</table>
-    </section>
+		<br><br><br>
+		<div class="form">
+			<h2>Admin Login</h2>
+			<br>
+            <form class="login-form" method="post" action="update.php">
+				<input type="number" name="id" placeholder="id" value="<?php echo $d['id']; ?>" >
+				<input type="text" name="name" placeholder="name" value="<?php echo $d['name']; ?>" required>
+				<input type="text" name="link" placeholder="link" value="<?php echo $d['link']; ?>" required>
+				<button name="submit">update</button>
+            </form>
+        </div>
+	</section>
     <script src="assets/js/main.js"></script>
 </body>
-
-</html>
+<?php }?>
