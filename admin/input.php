@@ -1,5 +1,11 @@
-<?php 
-include 'session.php';
+<?php
+require 'connection.php';
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+	header("Location: login");
+	exit;
+}
 function tambah($data) {
 	global $conn;
 	$id = htmlspecialchars($data["id"]);

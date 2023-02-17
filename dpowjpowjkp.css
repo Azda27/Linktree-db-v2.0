@@ -9,11 +9,14 @@ body{
     text-align: center;
     font-size: 42pt;
     font-family: 'Kdam Thmor Pro', sans-serif;
+  color:white;
 }
 .footer{
     text-align: center;
     font-size: 14pt;
     font-family: 'Nunito', sans-serif;
+color:white;
+
 }
 body {
 	margin: 0;
@@ -24,13 +27,13 @@ body {
 
 a {
 	width: 350px;
-    height: 40px;
+  height: 40px;
 	text-align: center;
 	position: relative;
 	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
 	color: white;
 	text-decoration: none;
-	font: 700 30px consolas;
+	font: 550 30px consolas;
 	overflow: hidden;
     background-color:black;
     font-family: 'Raleway', sans-serif;

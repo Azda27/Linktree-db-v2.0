@@ -1,5 +1,11 @@
 <?php 
-require 'session.php';
+require 'connection.php';
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+	header("Location: login");
+	exit;
+}
 $id = $_GET["id"];
 if( hapus($id) > 0 ) {
 	echo "<p>Data has been deleted</p>";

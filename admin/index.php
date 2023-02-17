@@ -1,5 +1,11 @@
 <?php 
-require 'session.php';
+require 'connection.php';
+session_start();
+
+if( !isset($_SESSION["login"]) ) {
+	header("Location: login");
+	exit;
+}
 $result = mysqli_query($conn, "SELECT * FROM admin");
 $row = mysqli_fetch_assoc($result);
 ?>
