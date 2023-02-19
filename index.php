@@ -1,9 +1,6 @@
-<?php
-require 'connection.php'
-?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,86 +24,73 @@ require 'connection.php'
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito:ital@1&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Azda</title>
-</head>
-<body>
-        <!-- Header -->
-    <div class="header">Azda</div>
-    <br><br><br><br>
-    <!-- php-query -->
-    <?php $data = mysqli_query($conn,"select * from link");while($d = mysqli_fetch_array($data)){?>
-        
-        <!-- query-result -->
-        <a target="_blank" class="link" href="<?php echo $d['link'];?>"><?php echo $d['name'];?></a>
-    <!-- End-php-query -->
-        <?php }?>
-            <!-- Footer -->
-    <h4 class="footer"><p>&copy; Azda 2021 - 2023</p></h4>
-</body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />    <title>Azda</title>
+  </head>
+  <body class="container light-mode">
+    <div class="container">
+        <div id="mode-toggle"><span class="material-symbols-outlined">dark_mode</span></div>
+        <h1 class="header">Azda</h1>
+        <div class="linktree">
+            <a href="#">Link 1</a>
+        </div>
+        <h6 class="footer">&copy; Azda 2021 - 2023</h6>
+    </div>
+  </body>
 </html>
+<script src="script.js"></script>
+    <style>
+        *{
+          padding: 0;
+          margin: 0;
+        }
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-<!-- style -->
-<style>
-  .link {
-  display: inline-block;
-  margin: 0 0.5rem;
-  animation: fadeInLeft;
-  animation-duration: 1.7s;
-}
-.header {
-  display: inline-block;
-  margin: 0 0.5rem;
-  animation: fadeInDown;
-  animation-duration: 1.7s;
-}
-*{
-    padding: 0;
-    list-style: none;
-}
-body{
-    background: linear-gradient(to left , rgb(151, 255, 104), rgb(218, 146, 52), rgb(4, 62, 255));
-}
-.header{
-    text-align: center;
-    font-size: 42pt;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-  color:white;
-}
-.footer{
-    text-align: center;
-    font-size: 14pt;
-    font-family: 'Nunito', sans-serif;
-color:white;
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-}
-body {
-	margin: 0;
-	height: 100vh;
-	display: grid;
-	place-items: center;
-}
+        .light-mode {
+          background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245), rgb(61, 197, 34));
+            color: #000;
+        }
 
-a {
-	width: 350px;
-  	height: 40px;
-	text-align: center;
-	position: relative;
-	color: white;
-	text-decoration: none;
-	font: 550 30px consolas;
-	overflow: hidden;
-    background-color:black;
-    font-family: 'Raleway', sans-serif;
-}
-</style>
+        .dark-mode {
+            background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245), rgb(61, 197, 34), rgb(255, 0, 64));
+            color: #fff;
+        }
 
-<!-- script -->
+        .linktree {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
 
-  <!-- google analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8DGZ3PY53"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W8DGZ3PY53');
-  </script>
+        .linktree a {
+            display: block;
+            width: 25%;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .linktree a:hover {
+            background-color: #f2f2f2;
+            color: #000;
+        }
+
+        .dark-mode .linktree a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
