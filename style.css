@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito:ital@1&family=Poppins&family=Raleway&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+*{
+    padding: 0;
+    list-style: none;
+}
+ /* body{
+    background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245), rgb(61, 197, 34), rgb(255, 0, 64));
+} */
+.header{
+     text-align: center;
+     font-size: 42pt;
+     font-family: 'Kdam Thmor Pro', sans-serif;
+     color: white; 
+}
+ 
+.link li a{
+    width: 350px;
+    height: 40px;
+    border: solid 3px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-size: 20pt;
+    text-decoration:none;
+    color: black;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    font-family: 'Raleway', sans-serif;
+}
+.linktree li a:hover{
+     background-color: rgb(223, 221, 213);
+}
+.footer{
+     text-align: center;
+     font-size: 14pt;
+     font-family: 'Nunito', sans-serif;
+     color: white;
+}
+.disclaimer {
+    display: none;
+}
