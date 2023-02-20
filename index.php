@@ -31,7 +31,7 @@
   </head>
   <body class="container light-mode">
     <div class="container">
-        <div id="mode-toggle"><span class="material-symbols-outlined">dark_mode</span></div>
+        <div id="mode-toggle"><button class="material-symbols-outlined">dark_mode</button></div>
         <h1 class="header">Azda</h1>
         <div class="linktree">
             <a href="#">Link 1</a>

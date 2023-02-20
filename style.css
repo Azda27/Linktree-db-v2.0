@@ -1,13 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nunito:ital@1&family=Poppins&family=Raleway&display=swap);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css);
-@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
 *{
     padding: 0;
     list-style: none;
 }
- /* body{
+ body{
     background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245), rgb(61, 197, 34), rgb(255, 0, 64));
-} */
+}
 .header{
      text-align: center;
      font-size: 42pt;
@@ -15,7 +12,7 @@
      color: white; 
 }
  
-.link li a{
+.linktree a{
     width: 350px;
     height: 40px;
     border: solid 3px;
@@ -28,11 +25,13 @@
     border-radius: 8px;
     text-align: center;
     margin-top: 10px;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
     font-family: 'Raleway', sans-serif;
 }
-.linktree li a:hover{
+.linktree a:hover{
      background-color: rgb(223, 221, 213);
+}
+.container{
+    margin-top: -20px;
 }
 .footer{
      text-align: center;
@@ -42,4 +41,60 @@
 }
 .disclaimer {
     display: none;
+}
+
+/* ai */
+
+*{
+
+  }
+  body {
+      font-family: sans-serif;
+  }
+  .linktree {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px 0;
+  }
+
+  .linktree a {
+      width: 25%;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+  }
+
+  .linktree a:hover {
+      background-color: #f2f2f2;
+      color: #000;
+  }
+
+        /* Light-mode */
+
+
+  .light-mode {
+    background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245));
+      color: #000;
+  }
+
+        /* Dark-mode */
+  .dark-mode .linktree a:hover {
+      background-color: #000;
+      color: #fff;
+  }
+  .dark-mode {
+    background: linear-gradient(to left, rgb(255, 123, 0), rgb(54, 11, 245), rgb(61, 197, 34), rgb(255, 0, 64));
+    color: #fff;
+}
+
+.material-symbols-outlined{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
 }
