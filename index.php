@@ -1,5 +1,11 @@
+<<<<<<< Updated upstream
 <?php
 //   require 'connection.php'
+=======
+<<<<<<< HEAD
+  <?php
+  require 'connection.php'
+>>>>>>> Stashed changes
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -153,8 +159,40 @@ body {
   color: #f1c40f;
 }
 
+<<<<<<< Updated upstream
 .dark-mode #mode-icon {
   color: #f5f6fa;
 }
 
 </style>
+=======
+    <!-- google analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8DGZ3PY53"></script>
+    <script src="script.js"></script>
+=======
+<?php
+require 'connection.php'
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LLRrFw.css">
+    <title>Azda</title>
+</head>
+<body>
+    <div class="header">Azda</div>
+    <br><br><br><br><br>
+    <?php $data = mysqli_query($conn,"select * from link");while($d = mysqli_fetch_array($data)){?>
+    <div class="link">
+        <li><a target="_blank" href="<?php echo $d['link'];?>"><div><?php echo $d['name'];?></div></a></li>
+    </div>
+    <?php }?>
+    <br><br>
+    <h4 class="footer"><p>&copy; Azda 2021 - 2022</p></h4>
+</body>
+</html>
+>>>>>>> 18cc5df (Commit)
+>>>>>>> Stashed changes
