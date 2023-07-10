@@ -1,11 +1,5 @@
-<<<<<<< Updated upstream
-<?php
-//   require 'connection.php'
-=======
-<<<<<<< HEAD
   <?php
   require 'connection.php'
->>>>>>> Stashed changes
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,11 +159,9 @@ body {
 }
 
 </style>
-=======
     <!-- google analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8DGZ3PY53"></script>
     <script src="script.js"></script>
-=======
 <?php
 require 'connection.php'
 ?>
@@ -194,5 +186,3 @@ require 'connection.php'
     <h4 class="footer"><p>&copy; Azda 2021 - 2022</p></h4>
 </body>
 </html>
->>>>>>> 18cc5df (Commit)
->>>>>>> Stashed changes
